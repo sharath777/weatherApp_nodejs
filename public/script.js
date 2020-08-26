@@ -31,14 +31,11 @@ icon.set('icon', 'clear-day')
 icon.play()
 
 function setWeatherData(data, place) {
-    console.log("THIS IS A TEST")
     // Round up the temp 
    var celcius = Math.round(parseFloat(data.data.main.temp)-273.15);
-
     locationElement.textContent = place
     statusElement.textContent = data.weather.description
     temperatureElement.textContent = celcius + '&deg;';
-
     console.log("Temp in celcius " +celcius)
     humidityElement.textContent = data.data.main.humidity
     feelsLikeElement.textContent = data.main.feels_like
